@@ -1,3 +1,4 @@
+# package.jsonを作成し、最低限のパッケージをインストールする
 init:
 	docker-compose run --rm -v ./:/usr/src/app frontend npm init -y && npm install \
 		--save-prod \

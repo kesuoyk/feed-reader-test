@@ -13,4 +13,4 @@ services:
       - 8888:80
     privileged: true
     volumes:
-      - "./:/usr/share/nginx/html"
+      - ./public/:/usr/share/nginx/html
