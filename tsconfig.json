@@ -4,8 +4,9 @@
     "sourceMap": true,
     "target": "ES5",
     "module": "ES2015",
-    "jsx": "react",
+    "jsx": "react-jsx",
     "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
     "lib": [
       "ES2021",
       "DOM"
