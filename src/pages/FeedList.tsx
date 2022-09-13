@@ -3,7 +3,13 @@ import {
   Link
 } from 'react-router-dom';
 
+import {
+  useDocumentTitle,
+} from '../hooks';
+
 export const FeedList: React.FC = () => {
+  useDocumentTitle('Feed List');
+
   return (
     <>
       <ul>

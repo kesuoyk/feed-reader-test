@@ -1,6 +1,12 @@
 import React from 'react';
 
+import {
+  useDocumentTitle,
+} from '../hooks';
+
 export const FeedDetail: React.FC = () => {
+  useDocumentTitle('Feed Detail');
+
   return (
     <>
       <ul>
