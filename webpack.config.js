@@ -1,6 +1,8 @@
+const CopyPlugin = require('copy-webpack-plugin');
+
 module.exports = {
   mode: 'development',
-  entry: './src/index.tsx',
+  entry: `${__dirname}/src/index.tsx`,
   output: {
     path: `${__dirname}/public`,
     filename: 'app.js',
@@ -11,4 +13,14 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.tsx', '.js']
   },
+  plugins: [
+    new CopyPlugin({
+      patterns: [
+        {
+          from: `${__dirname}/src/index.html`,
+          to: `${__dirname}/public/index.html`,
+        },
+      ]
+    })
+  ],
 };
