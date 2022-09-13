@@ -1,9 +1,9 @@
 import React from 'react';
 import {
-  BrowserRouter as Router,
   Route,
   Routes,
-  Link
+  Link,
+  useNavigate,
 } from 'react-router-dom';
 
 import {
@@ -12,20 +12,20 @@ import {
 } from './pages';
 
 export const App: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
     <>
       <header className="header">
-        <button>戻る</button>
+        <button onClick={() => navigate(-1)}>戻る</button>
         <button>設定</button>
       </header>
 
       <main>
-        <Router>
-          <Routes>
-            <Route path="/" element={<FeedList/>} />
-            <Route path="/feeds/xxx" element={<FeedDetail/>} />
-          </Routes>
-        </Router>
+        <Routes>
+          <Route path="/" element={<FeedList/>} />
+          <Route path="/feeds/xxx" element={<FeedDetail/>} />
+        </Routes>
       </main>
     </>
   );
